@@ -1,0 +1,21 @@
+.mypolicy {
+    padding-left: 16em;
+}
+
+.card{
+    background-color: aqua;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    size: auto;
+}
+
+p{
+    margin:0px;
+}
+
+.card-header {
+     padding: 0; 
+     margin-bottom: 0;
+     background-color: #f7f7f9; 
+     border-bottom: 0;
+}

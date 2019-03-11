@@ -1,0 +1,40 @@
+<section id="cover">
+  <div id="cover-caption">
+    <div class="container">
+      <div class="col-sm-12 col-sm-offset-1">
+        <h1>Company name: {{ policyDetails.insurerName }}</h1>
+        <h2>Policy name: {{ policyDetails.policyName }}</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<mat-tab-group classs ="tabbed-pane" style="margin-bottom: 10%;" mat-align-tabs="center">
+<mat-tab label="Policy Description" > 
+  <p>{{policyDetails.policyDescription}} </p>
+</mat-tab>
+<mat-tab label="Benefits"> 
+<!-- <p>{{policyDetails.benefits}}</p> Benefits -->
+</mat-tab>
+<mat-tab label="Terms and conditions">
+ <!-- <p>{{policyDetails.termsAndConditions}} </p> Terms -->
+</mat-tab>
+<mat-tab label="General Details">
+<p>Policy Id : {{policyDetails.policyId}} </p>
+<!-- <p>Policy Type : {{policyDetails.policyType}}</p> -->
+<p>Policy Tenure : {{policyDetails.policyTerm}}</p>
+<!-- <p>Gender : {{policyDetails.genderAvail}}</p> -->
+<p>Waiting period : {{policyDetails.waitingPeriod}}</p>
+<!-- <p>Diseases covered : </p>
+  <div *ngFor = "let disease of policyDetails.diseasesCovered">
+    <li>{{disease}}</li>
+  </div> -->
+</mat-tab>
+<mat-tab label="Cashless hospitals">
+<!-- <ul>
+<div *ngFor = "let hospital of policyDetails.cashlessHospitals">
+ <li>{{hospital}}</li>
+</div>
+</ul> -->
+ </mat-tab>
+</mat-tab-group>
+<!-- <p>{{policyDetails.policyName}}</p> -->

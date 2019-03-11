@@ -1,0 +1,53 @@
+<!-- 
+<div class="container" style="text-align:center; margin-left:20%; margin-bottom: 50%;">
+  <div class="row" style="text-align:center">
+    <div class="col-md-6" style="font-size:22px">Recommendations</div>
+    <br /><br /><br /><br />
+  </div>
+  <div class="row" style="text-align:center">
+    <div
+      *ngFor="let blog of recommendations"
+      class="col-md-3"
+    >
+      <div class="panel panel-default">
+        <div class="panel-heading">{{ blog.policyName | uppercase }}</div>
+        <div class="panel-body">
+          <p>Policy Id : {{ blog.policyId }}</p>
+        </div>
+ 
+        <div class="panel-footer">
+          <br /><br /><a
+          [routerLink] = "['policyDetails', blog.insurerName, blog.policyName]"
+           class="btn btn-primary" onClick="window.location.reload();"
+           >Read more</a>
+         <a [routerLink] = "['buyPolicy',blog.insurerName,blog.policyName,username]" class ="btn btn-primary"> Buy </a>
+        </div>
+      </div>
+ 
+      <br />
+    </div>
+  </div>
+ </div>  -->
+ <mat-card-header >
+  <p style="margin-left: 20%;">Recommendations</p>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngFor="let blog of recommendations" >
+        <div class="panel panel-default" style="width: 50%; margin-left: 15%;">
+          <div class="panel-heading">Policy Name: {{ blog.policyName | uppercase }}</div>
+          <p>Policy Id : {{ blog.policyId }}</p>
+          <p>InsurerName: {{blog.insurerName}}</p>
+          <p>Monthly Premium: {{ blog.monthlyPremium }}</p>
+          <p>Waiting Period: {{ blog.waitingPeriod }}</p>
+                
+          <mat-card-footer>
+            <a
+            [routerLink] = "['/policyDetails', blog.insurerName, blog.policyName]"
+             class="btn btn-primary" style ="margin-right: 5%;margin-left: 20%; margin-bottom: 2%;" onClick="window.location.reload();"
+             >Read more</a>
+           <a [routerLink] = "['/buyPolicy',blog.insurerName,blog.policyName,userName]" class ="btn btn-primary" style ="margin-right: 5%;margin-left: 20%; margin-bottom: 2%;"> Buy </a>
+          </mat-card-footer>
+        </div>
+          </div>
+    </mat-card-content>
+

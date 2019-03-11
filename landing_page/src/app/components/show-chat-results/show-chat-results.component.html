@@ -1,0 +1,22 @@
+<mat-card-header >
+    
+</mat-card-header>
+<mat-card-content>
+  <div *ngFor="let policy1 of policies" >
+    <div class="panel panel-default" style="width: 50%; margin-left: 15%;">
+      <div class="panel-heading">Policy Name: {{ policy1.policyName }}</div>
+      <div *ngFor="let disease of policy1.diseasesList">
+        <p>{{ disease.diseasesCovered }}</p>
+</div>
+      <p>Age-Group: {{ policy1.minAge }} - {{ policy1.maxAge }}</p>
+      <p>Min Sum Insured: {{ policy1.minSumInsured }}</p>
+      <p>Max Sum Insured: {{ policy1.maxSumInsured }}</p>
+            
+      <mat-card-footer>
+        <button class = " btn btn-outline-success my-2 my-sm-0 btn-info" style ="margin-right: 5%;margin-left: 20%; margin-bottom: 2%;" [routerLink]="['buyPolicy',policy1.policyName,policy1.insurerName,policy1.insuredName]">
+          Buy
+        </button>
+      </mat-card-footer>
+    </div>
+      </div>
+</mat-card-content>

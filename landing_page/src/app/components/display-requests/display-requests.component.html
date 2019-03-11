@@ -1,0 +1,38 @@
+
+<div class="container" style="text-align:center; margin-left: 25%;">
+    <div class="row" style="text-align:center">
+      <div class="col-md-12" style="font-size:18px">My Requests</div>
+      <br /><br /><br /><br />
+    </div>
+    <div class="row" style="text-align:center">
+      <div *ngFor="let count of requests" class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Insurer Name: {{ count.insuredName }}</div>
+          <div class="panel-body">
+            <p>Approval Status of X: Pending</p>
+            <p>Created Date: {{count.createDate}}</p>
+            <p>New Policy Name: {{count.newInsurerProduct}}</p>
+          </div>
+          <div class="panel-footer">
+            <a [routerLink]="['/deleteRequest', count.portingRequestId]" class="btn btn-primary" style ="margin-right: 5%;"onClick= "window.location.reload();">Delete</a>
+            <a [routerLink]="['/updateRequest', count.portingRequestId]" class="btn btn-primary"onClick= "window.location.reload();">Update</a>
+           </div>
+        </div>
+        <br/>
+      </div>
+    </div>
+  </div>
+<!-- <app-footer></app-footer> -->
+<!-- <router-outlet></router-outlet> -->
+
+  <!-- <div>
+    <ul *ngFor = "let count of requests ">
+      <li>
+        {{count.insuredName}}
+      </li>
+      <li>{{track.name}}</li>
+      <li>{{track.comment}}</li>
+     <a [routerLink]="['/deleteTrack', track.id]" class="btn btn-primary">Delete</a>
+      <a [routerLink]="['/updateTrack', track.id,track.comment]" class="btn btn-primary">Update</a>
+    </ul>
+  </div> -->
